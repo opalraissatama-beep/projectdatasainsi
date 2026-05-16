@@ -38,6 +38,14 @@ Set `NEXT_PUBLIC_API_BASE_URL` to your backend URL when deploying.
 - Backend: Railway
 - Frontend: Vercel
 
+### Vercel frontend setup
+
+1. Import the GitHub repository into Vercel.
+2. Set the root directory to `frontend`.
+3. Add the environment variable `NEXT_PUBLIC_API_BASE_URL` with your Railway backend URL.
+4. Leave the build command as `npm run build`.
+5. Leave the output directory handled by Next.js default settings.
+
 ## API
 
 - `POST /predict`
