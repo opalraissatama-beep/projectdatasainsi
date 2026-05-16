@@ -12,9 +12,9 @@ Next.js 15 + FastAPI full-stack simulation for an AI-powered web application fir
 1. Create a Python environment.
 2. Install dependencies from `backend/requirements.txt`.
 3. Place your trained model at `backend/app/ai_engine/sentinel_ai_engine_v2.pkl`.
-	- If you keep `sentinel_ai_engine_v2.pkl` in the workspace root, the backend will also pick it up from there.
-4. The analysis images `confusion_matrix.png` and `shap_sqli.png` are exposed by the backend at `/artifacts/confusion-matrix` and `/artifacts/shap-sqli`.
-5. Run the app from the `backend` folder:
+4. Place the analysis images at `backend/confusion_matrix.png` and `backend/shap_sqli.png`.
+5. The analysis images are exposed by the backend at `/artifacts/confusion-matrix` and `/artifacts/shap-sqli`.
+6. Run the app from the `backend` folder:
 
 ```bash
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
@@ -44,7 +44,8 @@ Set `NEXT_PUBLIC_API_BASE_URL` to your backend URL when deploying.
 2. Set the root directory to `frontend`.
 3. Add the environment variable `NEXT_PUBLIC_API_BASE_URL` with your Railway backend URL.
 4. Leave the build command as `npm run build`.
-5. Leave the output directory handled by Next.js default settings.
+5. Leave the Output Directory empty in Vercel Project Settings. Do not set it to `public`.
+6. Keep the framework preset as Next.js.
 
 ## API
 

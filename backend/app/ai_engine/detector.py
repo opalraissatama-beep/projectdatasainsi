@@ -11,8 +11,7 @@ import scipy.sparse as sp
 
 from app.ai_engine.feature_extractor import extract_security_features
 
-
-MODEL_PATH = Path(__file__).resolve().parents[3] / "sentinel_ai_engine_v2.pkl"
+MODEL_PATH = Path(__file__).resolve().with_name("sentinel_ai_engine_v2.pkl")
 
 
 @dataclass

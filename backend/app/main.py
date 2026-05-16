@@ -32,12 +32,12 @@ def root() -> dict:
 
 @app.get("/artifacts/confusion-matrix")
 def confusion_matrix() -> FileResponse:
-    return FileResponse(Path(__file__).resolve().parents[2] / "confusion_matrix.png", media_type="image/png")
+    return FileResponse(Path(__file__).resolve().parents[1] / "confusion_matrix.png", media_type="image/png")
 
 
 @app.get("/artifacts/shap-sqli")
 def shap_sqli() -> FileResponse:
-    return FileResponse(Path(__file__).resolve().parents[2] / "shap_sqli.png", media_type="image/png")
+    return FileResponse(Path(__file__).resolve().parents[1] / "shap_sqli.png", media_type="image/png")
 
 
 app.include_router(detect_router)
