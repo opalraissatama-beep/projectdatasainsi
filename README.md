@@ -38,6 +38,13 @@ Set `NEXT_PUBLIC_API_BASE_URL` to your backend URL when deploying.
 - Backend: Railway
 - Frontend: Vercel
 
+### Railway backend setup
+
+1. Create the Railway service from this GitHub repo.
+2. Set the root directory to `backend`.
+3. Use `uvicorn app.main:app --host 0.0.0.0 --port $PORT` as the start command if Railway asks for one.
+4. Make sure `backend/requirements.txt` is the dependency file Railway installs from.
+
 ### Vercel frontend setup
 
 1. Import the GitHub repository into Vercel.
